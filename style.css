@@ -329,13 +329,13 @@ html {
     justify-content: space-between;
 }
 
-.contact-section .contact-info--list .contact-info {
+.contact-section .contact-info-list .contact-info {
     display: flex;
     gap: 20px;
     margin: 20px 0;
     align-items: center;
 }
-.contact-section .contact-info--list .contact-info i {
+.contact-section .contact-info-list .contact-info i {
     font-size: 1.12rem;
 }
 .contact-section .contact-form .form-input {
