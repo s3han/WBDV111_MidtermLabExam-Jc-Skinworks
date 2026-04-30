@@ -86,7 +86,7 @@ header .navbar {
     color: white;
     background: rgb(139, 1, 139);
 }
-.navbar:where(#menu-close-button, #menu-open-button) {
+.navbar :where(#menu-close-button, #menu-open-button) {
     display: none;
 }
 
