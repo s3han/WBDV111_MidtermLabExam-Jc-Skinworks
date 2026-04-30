@@ -202,7 +202,7 @@ header .navbar {
         background: rgb(0, 0, 0, 0.2);
      }
 
-    .navbar:where(#menu-close-button, #menu-open-button) {
+    .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: 1.3rem;
     }
