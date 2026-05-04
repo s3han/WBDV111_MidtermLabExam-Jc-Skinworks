@@ -4,44 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JC Skinworks Derma Clinic</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<body>
-    <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h2 class="logo-text">JC Skinworks</h2>
-            </a>
-            <ul class="nav-menu">
-                <button id="menu-close-button" class="fas fa-times"></button>
+<header>
+    <nav class="navbar section-content">
+        <a href="#" class="nav-logo">
+            <h2 class="logo-text">JC Skinworks</h2>
+        </a>
+        <ul class="nav-menu">
+            <button id="menu-close-button" class="fas fa-times"></button>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contacts</a>
+            </li>
+        </ul>
+        <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+</header>
 
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contacts</a>
-                </li>
-            </ul>
-
-            <button id="menu-open-button" class="fas fa-bars"></button>
-        </nav>
-    </header>
-</body>
-<!-- HOME -->
+<!-- HOME / HERO -->
 <main>
-    <!--Hero SEction-->
     <section class="hero-section">
         <div class="section-content">
             <div class="hero-details">
@@ -49,94 +45,134 @@
                 <h3 class="subtitle">Make your skin glow with our special offers!</h3>
                 <p class="description">Our clinic is dedicated to providing high-quality skincare treatments tailored to your unique needs. From advanced facial therapies to personalized skin solutions.</p>
                 <div class="buttons">
-                    <a href="https://www.facebook.com/JCsdermaclinic" target=" "class="button-contact-us">Contact Us</a>
+                    <a href="https://www.facebook.com/JCsdermaclinic" target="_blank" class="button-contact-us">Contact Us</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
-                <img src="logo (2).png" alt="Hero" class="hero-image">
+                <img src="logo (2).png" alt="JC Skinworks Logo" class="hero-image">
             </div>
         </div>
     </section>
 </main>
-<script src="script.js"></script>
+
 <!-- ABOUT -->
 <section class="about-section" id="about">
     <div class="section-content">
-       <div class="about-image-wrapper">
-        <img src="aboutpic.jpg" alt="About" class="about-image">
-       </div>
-       <div class="about-details">
-        <h2 class="section-title">About Us</h2>
-        <p class="text">Welcome to JC's Skin Works Derma, where your skin health and beauty are our top priorities.
-            We provide professional skincare treatments using advanced technology and high-quality products.Our team of licensed dermatologists and skincare specialists are dedicated to helping you achieve
-            healthy, glowing skin. Whether it's acne treatment, facial care, or skin rejuvenation, we are here to help.Visit us and experience personalized skincare solutions tailored just for you. </p>
+        <div class="about-image-wrapper">
+            <img src="aboutpic.jpg" alt="About" class="about-image">
+        </div>
+        <div class="about-details">
+            <h2 class="section-title">About Us</h2>
+            <p class="text">Welcome to JC's Skin Works Derma, where your skin health and beauty are our top priorities.
+                We provide professional skincare treatments using advanced technology and high-quality products. Our team of licensed dermatologists and skincare specialists are dedicated to helping you achieve
+                healthy, glowing skin. Whether it's acne treatment, facial care, or skin rejuvenation, we are here to help. Visit us and experience personalized skincare solutions tailored just for you.</p>
             <div class="social-link-list">
-                <a href="https://www.facebook.com/JCsdermaclinic" target=" "class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/JCsdermaclinic" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
             </div>
-       </div>
+        </div>
     </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="container">
-    <div class="gallery">
-        <img src="b1.jpg">
-        <img src="b2.jpg">
-        <img src="b3.jpg">
+<section class="services-section" id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="container swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="derma.jpg" alt="Diamond Peel" class="card-image">
+                        <p class="badge diamond">Diamond Peel</p>
+                        <h2 class="card-title">Diamond Peel w/ Basic Facial</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="derma1.jpg" alt="Skincare" class="card-image">
+                        <p class="badge skincare">Skincare</p>
+                        <h2 class="card-title">Professional Skin Care Treatment</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="derma2.jpg" alt="Hydra Facial" class="card-image">
+                        <p class="badge hydra">Hydra Facial</p>
+                        <h2 class="card-title">Hydra Facial Deep Cleansing</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="derma3.jpg" alt="Botox" class="card-image">
+                        <p class="badge botox">Botox</p>
+                        <h2 class="card-title">Botox Wrinkle Relief</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="derma4.jpg" alt="Face Mask" class="card-image">
+                        <p class="badge mask">Face Mask</p>
+                        <h2 class="card-title">Rejuvenating Face Mask Therapy</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
-    <table class="price-table">
-        <tr><th>Service</th><th>Price</th></tr>
-        <tr><td>Consultation</td><td>₱700</td></tr>
-        <tr><td>Facial</td><td>₱1000</td></tr>
-        <tr><td>Botox</td><td>₱350/unit</td></tr>
-    </table>
 </section>
 
 <!-- CONTACT -->
- <section class="contact-section">
-    <h2 class="section-title">Contacts Us</h2>
-<div class="section-content">
-    <ul class="contact-info-list">
-        <li class="contact-info">
-            <i class="fa-solid fa-location-crosshairs"></i>
-            <p>2/F, 173-D, Dr. Francisco F. Ingal's Bldg. M.L Quezon Ave. Brgy. San Isidro, Angono, Rizal</p>
-        </li>
-        <li class="contact-info">
-            <i class="fa-regular fa-envelope"></i>
-            <p>info@jcskinworks777@gmail.com</p>
-        </li>
-        <li class="contact-info">
-            <i class="fa-solid fa-phone"></i>
-            <p>0933-8281-476</p>
-            <p>0933-8281-477</p>
-        </li>
-        <li class="contact-info">
-            <i class="fa-solid fa-clock"></i>
-            <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
-        </li>
-    </ul>
-    <form action="#" class="contact-form">
-        <input type="text" placeholder="Your name" class="form-input" required>
-        <input type="email" placeholder="Your email" class="form-input" 
-        required>
-        <textarea placeholder="Your message" class="form-input" required
-        ></textarea>
-        <button class="submit-button">Submit</button>
-    </form>
-   </div>
- </section>
-<!--footer-->
-<footer class="footer-section">
-<div class="section-content">
-    <p class="copyright-text">© 2026 Dermatology Clinic</p>
-    <div class="social-link-list">
-        <a href="https://www.facebook.com/JCsdermaclinic" target=" "class="social-link"><i class="fa-brands fa-facebook"></i></a>
+<section class="contact-section" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="section-content">
+        <ul class="contact-info-list">
+            <li class="contact-info">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <p>2/F, 173-D, Dr. Francisco F. Ingal's Bldg. M.L Quezon Ave. Brgy. San Isidro, Angono, Rizal</p>
+            </li>
+            <li class="contact-info">
+                <i class="fa-regular fa-envelope"></i>
+                <p>info@jcskinworks777@gmail.com</p>
+            </li>
+            <li class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <p>0933-8281-476 / 0933-8281-477</p>
+            </li>
+            <li class="contact-info">
+                <i class="fa-solid fa-clock"></i>
+                <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
+            </li>
+        </ul>
+        <form action="#" class="contact-form">
+            <input type="text" placeholder="Your name" class="form-input" required>
+            <input type="email" placeholder="Your email" class="form-input" required>
+            <textarea placeholder="Your message" class="form-input" required></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
     </div>
-    <p class="policy-text">
-        <a href="#" class="policy-link">Privacy policy</a>
-        <span class="sepator"></span>
-    </p>
-</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+    <div class="section-content">
+        <p class="copyright-text">© 2026 JC Skinworks Derma Clinic</p>
+        <div class="social-link-list">
+            <a href="https://www.facebook.com/JCsdermaclinic" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p class="policy-text">
+            <a href="#" class="policy-link">Privacy Policy</a>
+        </p>
+    </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
