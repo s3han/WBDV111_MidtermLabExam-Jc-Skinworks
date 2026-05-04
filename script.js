@@ -87,17 +87,24 @@ const bookingForm     = document.getElementById("booking-form");
 const bookingName     = document.getElementById("booking-name");
 const bookingNameError = document.getElementById("booking-name-error");
 const bookingThankyou = document.getElementById("booking-thankyou");
+const bookingPhone = document.getElementById("booking-phone");
 
 // Set minimum date to today
 const bookingDate = document.getElementById("booking-date");
 if (bookingDate) {
     const today = new Date().toISOString().split("T")[0];
     bookingDate.setAttribute("min", today);
+    bookingDate.setAttribute("max", "2030-12-31");
 }
 
 if (bookingName) {
     bookingName.addEventListener("input", () => {
         bookingName.value = bookingName.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, "");
+    });
+}
+if (bookingPhone) {
+    bookingPhone.addEventListener("input", () => {
+        bookingPhone.value = bookingPhone.value.replace(/[^0-9]/g, "");
     });
 }
 
