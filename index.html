@@ -10,42 +10,44 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 <body>
-
 <!-- NAVBAR -->
 <header>
     <nav class="navbar section-content">
-        <a href="#" class="nav-logo">
+        <a href="#" class="nav-logo" data-section="home">
             <h2 class="logo-text">JC Skinworks</h2>
         </a>
         <ul class="nav-menu">
             <button id="menu-close-button" class="fas fa-times"></button>
             <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link active" data-section="home">Home</a>
             </li>
             <li class="nav-item">
-                <a href="#about" class="nav-link">About</a>
+                <a href="#" class="nav-link" data-section="about">About</a>
             </li>
             <li class="nav-item">
-                <a href="#services" class="nav-link">Services</a>
+                <a href="#" class="nav-link" data-section="services">Services</a>
             </li>
             <li class="nav-item">
-                <a href="#contact" class="nav-link">Contacts</a>
+                <a href="#" class="nav-link" data-section="contact">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-section="booking">Booking</a>
             </li>
         </ul>
         <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
 </header>
 
-<!-- HOME / HERO -->
+<!-- HOME -->
 <main>
-    <section class="hero-section">
+    <section class="page-section hero-section active" id="section-home">
         <div class="section-content">
             <div class="hero-details">
                 <h2 class="title">Derma Clinic</h2>
                 <h3 class="subtitle">Make your skin glow with our special offers!</h3>
                 <p class="description">Our clinic is dedicated to providing high-quality skincare treatments tailored to your unique needs. From advanced facial therapies to personalized skin solutions.</p>
                 <div class="buttons">
-                    <a href="https://www.facebook.com/JCsdermaclinic" target="_blank" class="button-contact-us">Contact Us</a>
+                    <a href="#" class="button-contact-us">Contact Us</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
@@ -56,7 +58,7 @@
 </main>
 
 <!-- ABOUT -->
-<section class="about-section" id="about">
+<section class="page-section about-section" id="section-about">
     <div class="section-content">
         <div class="about-image-wrapper">
             <img src="aboutpic.jpg" alt="About" class="about-image">
@@ -74,53 +76,52 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services-section" id="services">
-    <h2 class="section-title">Our Services</h2>
-    <div class="container swiper">
-        <div class="card-wrapper">
-            <ul class="card-list swiper-wrapper">
-                <li class="card-item swiper-slide">
+<section class="page-section services-section" id="section-services">
+    <h2 class="section-title services-title">Our Services</h2>
+    <div class="services-slider-container">
+        <div class="swiper services-swiper">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="derma.jpg" alt="Diamond Peel" class="card-image">
                         <p class="badge diamond">Diamond Peel</p>
                         <h2 class="card-title">Diamond Peel w/ Basic Facial</h2>
                         <button class="card-button material-symbols-rounded">arrow_forward</button>
                     </a>
-                </li>
-                <li class="card-item swiper-slide">
+                </div>
+                <div class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="derma1.jpg" alt="Skincare" class="card-image">
                         <p class="badge skincare">Skincare</p>
                         <h2 class="card-title">Professional Skin Care Treatment</h2>
                         <button class="card-button material-symbols-rounded">arrow_forward</button>
                     </a>
-                </li>
-                <li class="card-item swiper-slide">
+                </div>
+                <div class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="derma2.jpg" alt="Hydra Facial" class="card-image">
                         <p class="badge hydra">Hydra Facial</p>
                         <h2 class="card-title">Hydra Facial Deep Cleansing</h2>
                         <button class="card-button material-symbols-rounded">arrow_forward</button>
                     </a>
-                </li>
-                <li class="card-item swiper-slide">
+                </div>
+                <div class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="derma3.jpg" alt="Botox" class="card-image">
                         <p class="badge botox">Botox</p>
                         <h2 class="card-title">Botox Wrinkle Relief</h2>
                         <button class="card-button material-symbols-rounded">arrow_forward</button>
                     </a>
-                </li>
-                <li class="card-item swiper-slide">
+                </div>
+                <div class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="derma4.jpg" alt="Face Mask" class="card-image">
                         <p class="badge mask">Face Mask</p>
                         <h2 class="card-title">Rejuvenating Face Mask Therapy</h2>
                         <button class="card-button material-symbols-rounded">arrow_forward</button>
                     </a>
-                </li>
-            </ul>
-
+                </div>
+            </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -129,7 +130,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section" id="contact">
+<section class="page-section contact-section" id="section-contact">
     <h2 class="section-title">Contact Us</h2>
     <div class="section-content">
         <ul class="contact-info-list">
@@ -150,12 +151,91 @@
                 <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
             </li>
         </ul>
-        <form action="#" class="contact-form">
-            <input type="text" placeholder="Your name" class="form-input" required>
-            <input type="email" placeholder="Your email" class="form-input" required>
-            <textarea placeholder="Your message" class="form-input" required></textarea>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+        <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="contact-name" placeholder="Your name" class="form-input" required>
+                <span class="input-error" id="name-error">Name must contain letters only.</span>
+                <input type="email" placeholder="Your email" class="form-input" required>
+                <textarea placeholder="Your message" class="form-input" required></textarea>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+            <div id="contact-thankyou" class="thankyou-message" style="display:none;">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Thank you for reaching us, Our team will get right back to you in a moment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section class="page-section booking-section" id="section-booking">
+    <h2 class="section-title">Book an Appointment</h2>
+    <div class="section-content booking-content">
+        <div class="booking-intro">
+            <i class="fa-regular fa-calendar-check booking-icon"></i>
+            <p>Ready to glow? Fill in the form below and we'll confirm your appointment shortly.</p>
+        </div>
+        <div class="booking-form-wrapper">
+            <form id="booking-form" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-name">Full Name</label>
+                        <input type="text" id="booking-name" placeholder="e.g. Maria Santos" class="form-input" required>
+                        <span class="input-error" id="booking-name-error">Name must contain letters only.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-phone">Phone Number</label>
+                        <input type="tel" id="booking-phone" placeholder="e.g. 0933-8281-476" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-email">Email Address</label>
+                        <input type="email" id="booking-email" placeholder="your@email.com" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Date</label>
+                        <input type="date" id="booking-date" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-time">Preferred Time</label>
+                        <select id="booking-time" class="form-input" required>
+                            <option value="">-- Select a time --</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-service">Service</label>
+                        <select id="booking-service" class="form-input" required>
+                            <option value="">-- Select a service --</option>
+                            <option>Diamond Peel w/ Basic Facial</option>
+                            <option>Professional Skin Care Treatment</option>
+                            <option>Hydra Facial Deep Cleansing</option>
+                            <option>Botox Wrinkle Relief</option>
+                            <option>Rejuvenating Face Mask Therapy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="booking-notes">Additional Notes (optional)</label>
+                    <textarea id="booking-notes" placeholder="Any allergies, concerns, or special requests..." class="form-input"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Confirm Booking</button>
+            </form>
+            <div id="booking-thankyou" class="thankyou-message" style="display:none;">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Your appointment has been booked! We'll reach out soon to confirm your schedule.</p>
+            </div>
+        </div>
     </div>
 </section>
 
