@@ -140,7 +140,7 @@ header .navbar {
 
 /* ── ABOUT ── */
 .about-section {
-    padding: 120px 0;
+    padding: 250px 0;
     background: white;
     min-height: 100vh;
 }
@@ -184,6 +184,7 @@ header .navbar {
 
 /* ── SERVICES ── */
 .services-section {
+    padding: 250px 0;
     min-height: 100vh;
     background: linear-gradient(purple, green);
     padding-bottom: 80px;
@@ -269,7 +270,7 @@ header .navbar {
 /* ── CONTACT ── */
 .contact-section {
     background: white;
-    padding: 50px 0 100px;
+    padding: 250px 0;
     min-height: 100vh;
 }
 .contact-section .section-content {
