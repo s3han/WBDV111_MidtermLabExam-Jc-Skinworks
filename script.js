@@ -108,6 +108,8 @@ if (bookingPhone) {
         bookingPhone.value = bookingPhone.value.replace(/[^0-9]/g, "");
     });
 }
+if(bookingPhone.length > 0 && !bookingPhone.startWith("09")) {
+    bookingPhone = "09" + bookingPhone.replace(/^0+/, ""); }
 if (bookingForm) {
     bookingForm.addEventListener("submit", (e) => {
         e.preventDefault();
