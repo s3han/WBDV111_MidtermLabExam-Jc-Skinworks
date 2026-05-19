@@ -102,14 +102,32 @@ if (bookingName) {
         bookingName.value = bookingName.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, "");
     });
 }
-
 if (bookingPhone) {
+    // Pre-fill with 09
+    bookingPhone.value = "09";
+
     bookingPhone.addEventListener("input", () => {
-        bookingPhone.value = bookingPhone.value.replace(/[^0-9]/g, "");
+        // Keep digits only
+        let digits = bookingPhone.value.replace(/[^0-9]/g, "");
+        // starts with 09
+        if (!digits.startsWith("09")) {
+            digits = "09" + digits.replace(/^0*9?/, "");
+        }
+        // 11 digits only
+        bookingPhone.value = digits.slice(0, 11);
+    });
+
+    bookingPhone.addEventListener("keydown", (e) => {
+        // bwl deltet 09
+        const selStart = bookingPhone.selectionStart;
+        const selEnd   = bookingPhone.selectionEnd;
+        if ((e.key === "Backspace" && selStart <= 2 && selEnd <= 2) ||
+            (e.key === "Delete"    && selStart < 2)) {
+            e.preventDefault();
+        }
     });
 }
-if(bookingPhone.length > 0 && !bookingPhone.startWith("09")) {
-    bookingPhone = "09" + bookingPhone.replace(/^0+/, ""); }
+
 if (bookingForm) {
     bookingForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -140,6 +158,7 @@ new Swiper('.services-swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        dynamicBullets: true,
     },
     navigation: {
         nextEl: '.swiper-button-next',
