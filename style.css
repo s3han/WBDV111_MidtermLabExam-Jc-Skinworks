@@ -184,16 +184,16 @@ header .navbar {
 
 /* ── SERVICES ── */
 .services-section {
-    padding: 250px 0;
+    padding: 100px 0;
     min-height: 100vh;
     background: linear-gradient(purple, green);
     padding-bottom: 80px;
 }
 .services-section .services-title {
-    color: white;
+    color: black;
 }
 .services-section .services-title::after {
-    background: white;
+    background: green;
 }
 .services-slider-container {
     max-width: 1100px;
@@ -270,7 +270,7 @@ header .navbar {
 /* ── CONTACT ── */
 .contact-section {
     background: white;
-    padding: 250px 0;
+    padding: 150px 0;
     min-height: 100vh;
 }
 .contact-section .section-content {
